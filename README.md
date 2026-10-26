@@ -11,14 +11,14 @@ npx serve .     # or: python3 -m http.server
 
 ## Editing content
 
-Everything lives in `index.html`. Elements still holding placeholder text carry
+Markup lives in `index.html`; translated strings (English + 繁體中文) live in `i18n.js`. Elements still holding placeholder text carry
 `class="placeholder"` (shown with a dashed amber outline and a label). Replace the
 text and remove the class.
 
 - **Work**: each `<li class="entry">` in `#work` is one role.
-- **Photos**: drop images into `/photos` and replace each `<div class="ph" …></div>`
-  with `<img src="/photos/name.jpg" alt="…" loading="lazy" />`. Frames render as a
-  film negative and "develop" on hover/tap.
+- **Photos**: images live in `/photos` (long edge ≤ 1800px). Each `<figure class="frame">`
+  in `#photos` is one frame; its caption text is `photo.N` in `i18n.js`. Frames render
+  as a film negative and "develop" on hover/tap.
 
 ## Deploy (Vercel)
 

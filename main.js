@@ -56,6 +56,7 @@ addEventListener("pointermove", (e) => {
   strip.scrollLeft = startScroll - dx;
 });
 addEventListener("pointerup", () => { dragX = null; strip.classList.remove("dragging"); });
+strip.addEventListener("dragstart", (e) => e.preventDefault());
 strip.addEventListener("click", (e) => {
   const f = e.target.closest(".frame");
   if (f && !moved) f.classList.toggle("dev");
