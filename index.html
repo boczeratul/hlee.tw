@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Hsuan Lee — Founder · Software Engineer · Photographer</title>
+  <meta name="description" content="Hsuan Lee: co-founder of Blocto, software engineer and photographer based in Taipei." />
+  <link rel="canonical" href="https://hlee.tw/" />
+  <link rel="alternate" hreflang="en" href="https://hlee.tw/?lang=en" />
+  <link rel="alternate" hreflang="zh-Hant-TW" href="https://hlee.tw/?lang=zh-TW" />
+  <link rel="alternate" hreflang="x-default" href="https://hlee.tw/" />
+  <meta property="og:title" content="Hsuan Lee" />
+  <meta property="og:description" content="Founder · Software Engineer · Photographer" />
+  <meta property="og:url" content="https://hlee.tw/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:locale:alternate" content="zh_TW" />
+  <meta name="theme-color" content="#0d0c0b" />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=JetBrains+Mono:wght@400;600&family=Inter:wght@400;500;600&family=Noto+Sans+TC:wght@400;500;700&family=Noto+Serif+TC:wght@300;600;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/styles.css" />
+  <!-- Pick language before first paint to avoid a flash of the wrong language -->
+  <script src="/i18n.js"></script>
+</head>
+<body>
+  <!-- Film grain + light leak overlays -->
+  <svg class="grain" aria-hidden="true">
+    <filter id="noise"><feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="3" stitchTiles="stitch" /></filter>
+    <rect width="100%" height="100%" filter="url(#noise)" />
+  </svg>
+  <div class="leak" aria-hidden="true"></div>
+  <div class="viewfinder" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
+
+  <header class="nav">
+    <a href="#top" class="logo">hlee<span>.tw</span></a>
+    <nav>
+      <a href="#about" data-i18n="nav.about">About</a>
+      <a href="#work" data-i18n="nav.work">Work</a>
+      <a href="#photos" data-i18n="nav.photos">Photos</a>
+      <a href="#contact" data-i18n="nav.contact">Contact</a>
+      <div class="lang" role="group" aria-label="Language">
+        <button type="button" data-lang="en">EN</button>
+        <button type="button" data-lang="zh-TW">中</button>
+      </div>
+    </nav>
+  </header>
+
+  <main id="top">
+    <!-- HERO: develops from a negative on load -->
+    <section class="hero">
+      <p class="frame-no">FRAME 00 · ISO 400 · f/2.8</p>
+      <h1 class="develop">Hsuan<br /><em>Lee</em></h1>
+      <p class="roles">
+        <span class="role role-founder" data-i18n="role.founder">Founder</span>
+        <span class="sep">/</span>
+        <span class="role role-eng"><code>software_engineer</code><i class="caret"></i></span>
+        <span class="sep">/</span>
+        <span class="role role-photo" data-i18n="role.photo">Photographer</span>
+      </p>
+      <p class="tagline" data-i18n="hero.tagline">I build companies, write software, and shoot film.</p>
+      <a class="scroll-cue" href="#about" data-i18n="hero.cue">Advance film ↓</a>
+    </section>
+
+    <!-- ABOUT: three facets -->
+    <section id="about" class="about">
+      <h2 class="section-title"><span>01</span> <b data-i18n="nav.about">About</b></h2>
+      <p class="lede" data-i18n="about.bio">I'm Hsuan, a founder and software engineer based in Taipei. I co-founded Blocto (portto) and led it as CEO from 2019 to 2025, making blockchain apps simple enough for anyone to use. Before that I led engineering at COBINHOOD and DEXON, and built web apps at 17 Media, Agoda and Yahoo. Away from the keyboard, I travel and take photos.</p>
+      <div class="facets">
+        <article class="facet facet-founder">
+          <h3 data-i18n="role.founder">Founder</h3>
+          <p data-i18n="about.founder">Co-founded Blocto (portto) and PlatoForum. AppWorks Accelerator #19.</p>
+        </article>
+        <article class="facet facet-eng">
+          <h3><code>&lt;Engineer /&gt;</code></h3>
+          <p data-i18n="about.eng">Full-stack since 2014: React, Node.js, mobile, and blockchain infrastructure.</p>
+        </article>
+        <article class="facet facet-photo">
+          <h3 data-i18n="role.photo">Photographer</h3>
+          <p data-i18n-html="about.photo">Travel, landscape and portrait photography from Japan to Iceland, shared as <a href="https://www.instagram.com/analog_nomad_/" target="_blank" rel="noopener">@analog_nomad_</a>.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- WORK: git-log style timeline -->
+    <section id="work" class="work">
+      <h2 class="section-title"><span>02</span> <b data-i18n="nav.work">Work</b></h2>
+      <p class="term-head"><code>$ git log --career --graph</code></p>
+      <ol class="timeline">
+        <li class="entry">
+          <span class="hash">b10c70e</span>
+          <div>
+            <p class="when">2019 — 2025</p>
+            <h3><span data-i18n="w1.t">Co-Founder &amp; CEO</span> · <span class="co" data-i18n="w1.c">Blocto (portto)</span></h3>
+            <p data-i18n="w1.d">Co-founded portto and led it for six and a half years, building Blocto to make blockchain applications and services simple enough for everyone to use.</p>
+          </div>
+        </li>
+        <li class="entry">
+          <span class="hash">cba2019</span>
+          <div>
+            <p class="when">2019 — 2020</p>
+            <h3><span data-i18n="w2.t">Technical Course Director &amp; Lecturer</span> · <span class="co" data-i18n="w2.c">College of Blockchain Asia</span></h3>
+            <p data-i18n="w2.d">Designed and taught the technical blockchain curriculum.</p>
+          </div>
+        </li>
+        <li class="entry">
+          <span class="hash">de7a0b1</span>
+          <div>
+            <p class="when">2018 — 2019</p>
+            <h3><span data-i18n="w3.t">VP of Engineering</span> · <span class="co" data-i18n="w3.c">DEXON Foundation</span></h3>
+            <p data-i18n="w3.d">Led development of DEXON products and planned its ecosystem. DEXON is a blocklattice consensus designed to be infinitely scalable, low-latency and Byzantine fault tolerant.</p>
+          </div>
+        </li>
+        <li class="entry">
+          <span class="hash">c0b1d00</span>
+          <div>
+            <p class="when">2017 — 2019</p>
+            <h3><span data-i18n="w4.t">VP of Engineering, from Frontend Director</span> · <span class="co" data-i18n="w4.c">COBINHOOD</span></h3>
+            <p data-i18n="w4.d">Built a large part of the exchange interface and led the client teams for web, iOS and Android. The world's first zero-fee crypto exchange, and the first crypto app to win a Red Dot design award.</p>
+          </div>
+        </li>
+        <li class="entry">
+          <span class="hash">17f1ive</span>
+          <div>
+            <p class="when">2017</p>
+            <h3><span data-i18n="w5.t">Senior Frontend Developer</span> · <span class="co" data-i18n="w5.c">17 Media</span></h3>
+            <p data-i18n="w5.d">One of two engineers who built the 17.live livestream web app from scratch, shipping the MVP within a month on React, Redux and RxJS.</p>
+          </div>
+        </li>
+        <li class="entry">
+          <span class="hash">a90da16</span>
+          <div>
+            <p class="when">2016 — 2017</p>
+            <h3><span data-i18n="w6.t">Full Stack Engineer</span> · <span class="co" data-i18n="w6.c">Agoda · Bangkok</span></h3>
+            <p data-i18n="w6.d">Built and maintained the frontend and backend of Agoda's booking form with C# .NET, TypeScript and KnockoutJS.</p>
+          </div>
+        </li>
+        <li class="entry">
+          <span class="hash">7a400e1</span>
+          <div>
+            <p class="when">2014 — 2016</p>
+            <h3><span data-i18n="w7.t">Software Engineer</span> · <span class="co" data-i18n="w7.c">Yahoo</span></h3>
+            <p data-i18n="w7.d">Worked on the mobile and desktop News web apps, among the first large-scale production apps on React, and contributed to Yahoo Taiwan's Android app.</p>
+          </div>
+        </li>
+        <li class="entry">
+          <span class="hash">91a70f0</span>
+          <div>
+            <p class="when">2014</p>
+            <h3><span data-i18n="w8.t">Founder</span> · <span class="co" data-i18n="w8.c">PlatoForum</span></h3>
+            <p data-i18n="w8.d">An experimental online debate platform that clusters opinions by how users react to each other's statements. Designed and built the clustering algorithm.</p>
+          </div>
+        </li>
+        <li class="entry">
+          <span class="hash">7e11ab0</span>
+          <div>
+            <p class="when">2010 — 2012</p>
+            <h3><span data-i18n="w9.t">Researcher</span> · <span class="co" data-i18n="w9.c">National Taiwan University</span></h3>
+            <p data-i18n="w9.d">Taiwan Evolutionary Intelligence Lab: genetic algorithms and other branches of AI and machine learning.</p>
+          </div>
+        </li>
+        <li class="entry init">
+          <span class="hash">0000000</span>
+          <div>
+            <p class="when" data-i18n="work.init">Initial commit</p>
+            <h3><span data-i18n="work.edu">Education</span> · <span class="co" data-i18n="work.school">National Taiwan University</span></h3>
+            <p data-i18n="work.degrees">M.S. Computational Science (2012) · B.S. Electrical Engineering (2010)</p>
+          </div>
+        </li>
+      </ol>
+      <a class="btn" href="https://www.linkedin.com/in/hleetw" target="_blank" rel="noopener" data-i18n="work.more">Full history on LinkedIn →</a>
+    </section>
+
+    <!-- PHOTOS: film strip, frames develop on hover -->
+    <section id="photos" class="photos">
+      <h2 class="section-title"><span>03</span> <b data-i18n="photos.title">Photographs</b></h2>
+      <p class="hint" data-i18n="photos.hint">Hover or tap a frame to develop it.</p>
+      <!-- Photos from @analog_nomad_; files live in /photos -->
+      <div class="strip" tabindex="0" aria-label="Film strip">
+        <div class="frames">
+          <figure class="frame" data-n="1"><img src="/photos/01.jpg" alt="Niseko, Japan" loading="lazy" decoding="async" /><figcaption><a href="https://www.instagram.com/p/DSFDCrVkoFR/" target="_blank" rel="noopener" data-i18n="photo.1">Niseko, Japan · 2025</a></figcaption></figure>
+          <figure class="frame" data-n="2"><img src="/photos/02.jpg" alt="Mount Fuji, Japan" loading="lazy" decoding="async" /><figcaption><a href="https://www.instagram.com/p/DRb8cd0EoCu/" target="_blank" rel="noopener" data-i18n="photo.2">Mount Fuji, Japan · 2025</a></figcaption></figure>
+          <figure class="frame" data-n="3"><img src="/photos/03.jpg" alt="Takachiho Gorge, Japan" loading="lazy" decoding="async" /><figcaption><a href="https://www.instagram.com/p/DM2lrYvSs2K/" target="_blank" rel="noopener" data-i18n="photo.3">Takachiho Gorge, Japan · 2025</a></figcaption></figure>
+          <figure class="frame" data-n="4"><img src="/photos/04.jpg" alt="Grjótagjá, Iceland" loading="lazy" decoding="async" /><figcaption><a href="https://www.instagram.com/p/DdtxrIEKGPj/" target="_blank" rel="noopener" data-i18n="photo.4">Grjótagjá, Iceland · 2026</a></figcaption></figure>
+          <figure class="frame" data-n="5"><img src="/photos/05.jpg" alt="Stuðlagil, Iceland" loading="lazy" decoding="async" /><figcaption><a href="https://www.instagram.com/p/Dds9nszKcBE/" target="_blank" rel="noopener" data-i18n="photo.5">Stuðlagil, Iceland · 2026</a></figcaption></figure>
+          <figure class="frame" data-n="6"><img src="/photos/06.jpg" alt="Iceland" loading="lazy" decoding="async" /><figcaption><a href="https://www.instagram.com/p/DdrgDOxCk8Q/" target="_blank" rel="noopener" data-i18n="photo.6">Iceland · 2026</a></figcaption></figure>
+          <figure class="frame" data-n="7"><img src="/photos/07.jpg" alt="Zaanse Schans, Netherlands" loading="lazy" decoding="async" /><figcaption><a href="https://www.instagram.com/p/DdpTXhEir--/" target="_blank" rel="noopener" data-i18n="photo.7">Zaanse Schans, Netherlands · 2026</a></figcaption></figure>
+          <figure class="frame" data-n="8"><img src="/photos/08.jpg" alt="Scottish Highlands" loading="lazy" decoding="async" /><figcaption><a href="https://www.instagram.com/p/DVKOlWRko9k/" target="_blank" rel="noopener" data-i18n="photo.8">Scottish Highlands · 2026</a></figcaption></figure>
+          <figure class="frame" data-n="9"><img src="/photos/09.jpg" alt="Bopiliao, Taipei" loading="lazy" decoding="async" /><figcaption><a href="https://www.instagram.com/p/DVC3BlhkvEk/" target="_blank" rel="noopener" data-i18n="photo.9">Bopiliao, Taipei · 2026</a></figcaption></figure>
+          <figure class="frame" data-n="10"><img src="/photos/10.jpg" alt="London, UK" loading="lazy" decoding="async" /><figcaption><a href="https://www.instagram.com/p/DU98sJ9CvJ0/" target="_blank" rel="noopener" data-i18n="photo.10">London, UK · 2026</a></figcaption></figure>
+          <figure class="frame" data-n="11"><img src="/photos/11.jpg" alt="Bopiliao, Taipei" loading="lazy" decoding="async" /><figcaption><a href="https://www.instagram.com/p/DU8FvWPim40/" target="_blank" rel="noopener" data-i18n="photo.11">Bopiliao, Taipei · 2026</a></figcaption></figure>
+          <figure class="frame" data-n="12"><img src="/photos/12.jpg" alt="Taichung Green Museumbrary" loading="lazy" decoding="async" /><figcaption><a href="https://www.instagram.com/p/DTCgvjZEsPx/" target="_blank" rel="noopener" data-i18n="photo.12">Taichung Green Museumbrary · 2026</a></figcaption></figure>
+        </div>
+      </div>
+      <a class="btn" href="https://www.instagram.com/analog_nomad_/" target="_blank" rel="noopener" data-i18n="photos.more">More on Instagram @analog_nomad_ →</a>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="contact">
+      <h2 class="section-title"><span>04</span> <b data-i18n="nav.contact">Contact</b></h2>
+      <p class="big" data-i18n-html="contact.big">Let's build something<br /><em>or go shoot a roll.</em></p>
+      <ul class="links">
+        <li><a href="https://www.linkedin.com/in/hleetw" target="_blank" rel="noopener">LinkedIn</a></li>
+        <li><a href="https://www.instagram.com/analog_nomad_/" target="_blank" rel="noopener">Instagram</a></li>
+        <li><a href="https://github.com/boczeratul" target="_blank" rel="noopener">GitHub</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <p>© <span id="year"></span> Hsuan Lee · hlee.tw · <span data-i18n="foot">Developed, not rendered.</span></p>
+  </footer>
+
+  <script src="/main.js" defer></script>
+</body>
+</html>
