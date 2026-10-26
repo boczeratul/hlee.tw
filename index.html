@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Hsuan Lee — Founder · Software Engineer · Photographer</title>
+  <meta name="description" content="Hsuan Lee: founder, software engineer and analog photographer." />
+  <link rel="canonical" href="https://hlee.tw/" />
+  <link rel="alternate" hreflang="en" href="https://hlee.tw/?lang=en" />
+  <link rel="alternate" hreflang="zh-Hant-TW" href="https://hlee.tw/?lang=zh-TW" />
+  <link rel="alternate" hreflang="x-default" href="https://hlee.tw/" />
+  <meta property="og:title" content="Hsuan Lee" />
+  <meta property="og:description" content="Founder · Software Engineer · Photographer" />
+  <meta property="og:url" content="https://hlee.tw/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:locale:alternate" content="zh_TW" />
+  <meta name="theme-color" content="#0d0c0b" />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=JetBrains+Mono:wght@400;600&family=Inter:wght@400;500;600&family=Noto+Sans+TC:wght@400;500;700&family=Noto+Serif+TC:wght@300;600;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/styles.css" />
+  <!-- Pick language before first paint to avoid a flash of the wrong language -->
+  <script src="/i18n.js"></script>
+</head>
+<body>
+  <!-- Film grain + light leak overlays -->
+  <svg class="grain" aria-hidden="true">
+    <filter id="noise"><feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="3" stitchTiles="stitch" /></filter>
+    <rect width="100%" height="100%" filter="url(#noise)" />
+  </svg>
+  <div class="leak" aria-hidden="true"></div>
+  <div class="viewfinder" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
+
+  <header class="nav">
+    <a href="#top" class="logo">hlee<span>.tw</span></a>
+    <nav>
+      <a href="#about" data-i18n="nav.about">About</a>
+      <a href="#work" data-i18n="nav.work">Work</a>
+      <a href="#photos" data-i18n="nav.photos">Photos</a>
+      <a href="#contact" data-i18n="nav.contact">Contact</a>
+      <div class="lang" role="group" aria-label="Language">
+        <button type="button" data-lang="en">EN</button>
+        <button type="button" data-lang="zh-TW">中</button>
+      </div>
+    </nav>
+  </header>
+
+  <main id="top">
+    <!-- HERO: develops from a negative on load -->
+    <section class="hero">
+      <p class="frame-no">FRAME 00 · ISO 400 · f/2.8</p>
+      <h1 class="develop">Hsuan<br /><em>Lee</em></h1>
+      <p class="roles">
+        <span class="role role-founder" data-i18n="role.founder">Founder</span>
+        <span class="sep">/</span>
+        <span class="role role-eng"><code>software_engineer</code><i class="caret"></i></span>
+        <span class="sep">/</span>
+        <span class="role role-photo" data-i18n="role.photo">Photographer</span>
+      </p>
+      <p class="tagline" data-i18n="hero.tagline">I build companies, write software, and shoot film.</p>
+      <a class="scroll-cue" href="#about" data-i18n="hero.cue">Advance film ↓</a>
+    </section>
+
+    <!-- ABOUT: three facets -->
+    <section id="about" class="about">
+      <h2 class="section-title"><span>01</span> <b data-i18n="nav.about">About</b></h2>
+      <!-- PLACEHOLDER: replace with Hsuan's own bio (both languages in i18n.js) -->
+      <p class="lede placeholder" data-placeholder="Bio" data-i18n="about.bio">
+        I'm a founder and software engineer based in Taiwan, and an analog photographer when I'm away from the keyboard.
+        This paragraph is a placeholder for a short personal bio.
+      </p>
+      <div class="facets">
+        <article class="facet facet-founder">
+          <h3 data-i18n="role.founder">Founder</h3>
+          <p data-i18n="about.founder">Building products and teams from zero to one.</p>
+        </article>
+        <article class="facet facet-eng">
+          <h3><code>&lt;Engineer /&gt;</code></h3>
+          <p data-i18n="about.eng">Shipping software that scales and stays maintainable.</p>
+        </article>
+        <article class="facet facet-photo">
+          <h3 data-i18n="role.photo">Photographer</h3>
+          <p data-i18n-html="about.photo">Shooting 35mm film on the road as <a href="https://www.instagram.com/analog_nomad_/" target="_blank" rel="noopener">@analog_nomad_</a>.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- WORK: git-log style timeline -->
+    <section id="work" class="work">
+      <h2 class="section-title"><span>02</span> <b data-i18n="nav.work">Work</b></h2>
+      <p class="term-head"><code>$ git log --career --graph</code></p>
+      <!-- PLACEHOLDER: LinkedIn could not be fetched. Replace each entry with real experience. -->
+      <ol class="timeline">
+        <li class="entry placeholder" data-placeholder="Experience">
+          <span class="hash">a1f3c9e</span>
+          <div>
+            <p class="when"><span>20XX</span> — <span data-i18n="work.present">Present</span></p>
+            <h3><span data-i18n="work.t1">Founder &amp; CEO</span> · <span class="co" data-i18n="work.company">Company name</span></h3>
+            <p data-i18n="work.d1">One or two lines on what the company does and what you built.</p>
+          </div>
+        </li>
+        <li class="entry placeholder" data-placeholder="Experience">
+          <span class="hash">7b2e04d</span>
+          <div>
+            <p class="when">20XX — 20XX</p>
+            <h3><span data-i18n="work.t2">Senior Software Engineer</span> · <span class="co" data-i18n="work.company">Company name</span></h3>
+            <p data-i18n="work.d2">Key systems, scale, and impact.</p>
+          </div>
+        </li>
+        <li class="entry placeholder" data-placeholder="Experience">
+          <span class="hash">3c98d1a</span>
+          <div>
+            <p class="when">20XX — 20XX</p>
+            <h3><span data-i18n="work.t3">Software Engineer</span> · <span class="co" data-i18n="work.company">Company name</span></h3>
+            <p data-i18n="work.d2">Key systems, scale, and impact.</p>
+          </div>
+        </li>
+        <li class="entry init">
+          <span class="hash">0000000</span>
+          <div>
+            <p class="when" data-i18n="work.init">Initial commit</p>
+            <h3><span data-i18n="work.edu">Education</span> · <span class="co placeholder" data-placeholder="Education" data-i18n="work.school">School, degree</span></h3>
+          </div>
+        </li>
+      </ol>
+      <a class="btn" href="https://www.linkedin.com/in/hleetw" target="_blank" rel="noopener" data-i18n="work.more">Full history on LinkedIn →</a>
+    </section>
+
+    <!-- PHOTOS: film strip, frames develop on hover -->
+    <section id="photos" class="photos">
+      <h2 class="section-title"><span>03</span> <b data-i18n="photos.title">Photographs</b></h2>
+      <p class="hint" data-i18n="photos.hint">Hover or tap a frame to develop it.</p>
+      <!-- PLACEHOLDER: Instagram could not be fetched. Put images in /photos and set each <img src>. -->
+      <div class="strip" tabindex="0" aria-label="Film strip">
+        <div class="frames">
+          <figure class="frame" data-n="1"><div class="ph" style="--h1:28;--h2:200"></div><figcaption data-i18n="photos.ph">Placeholder · Location</figcaption></figure>
+          <figure class="frame" data-n="2"><div class="ph" style="--h1:12;--h2:45"></div><figcaption data-i18n="photos.ph">Placeholder · Location</figcaption></figure>
+          <figure class="frame" data-n="3"><div class="ph" style="--h1:190;--h2:240"></div><figcaption data-i18n="photos.ph">Placeholder · Location</figcaption></figure>
+          <figure class="frame" data-n="4"><div class="ph" style="--h1:340;--h2:30"></div><figcaption data-i18n="photos.ph">Placeholder · Location</figcaption></figure>
+          <figure class="frame" data-n="5"><div class="ph" style="--h1:90;--h2:160"></div><figcaption data-i18n="photos.ph">Placeholder · Location</figcaption></figure>
+          <figure class="frame" data-n="6"><div class="ph" style="--h1:40;--h2:300"></div><figcaption data-i18n="photos.ph">Placeholder · Location</figcaption></figure>
+          <figure class="frame" data-n="7"><div class="ph" style="--h1:220;--h2:20"></div><figcaption data-i18n="photos.ph">Placeholder · Location</figcaption></figure>
+          <figure class="frame" data-n="8"><div class="ph" style="--h1:0;--h2:60"></div><figcaption data-i18n="photos.ph">Placeholder · Location</figcaption></figure>
+        </div>
+      </div>
+      <a class="btn" href="https://www.instagram.com/analog_nomad_/" target="_blank" rel="noopener" data-i18n="photos.more">More on Instagram @analog_nomad_ →</a>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="contact">
+      <h2 class="section-title"><span>04</span> <b data-i18n="nav.contact">Contact</b></h2>
+      <p class="big" data-i18n-html="contact.big">Let's build something<br /><em>or go shoot a roll.</em></p>
+      <ul class="links">
+        <li><a href="https://www.linkedin.com/in/hleetw" target="_blank" rel="noopener">LinkedIn</a></li>
+        <li><a href="https://www.instagram.com/analog_nomad_/" target="_blank" rel="noopener">Instagram</a></li>
+        <li><a href="https://github.com/boczeratul" target="_blank" rel="noopener">GitHub</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <p>© <span id="year"></span> Hsuan Lee · hlee.tw · <span data-i18n="foot">Developed, not rendered.</span></p>
+  </footer>
+
+  <script src="/main.js" defer></script>
+</body>
+</html>
