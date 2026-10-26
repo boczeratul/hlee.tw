@@ -29,6 +29,6 @@ text and remove the class.
 
 ### Skipping a deploy
 
-Commits whose message contains `[skip ci]`, `[ci skip]` or `[skip deploy]` don't
+Commits whose title (first line) contains `[skip ci]`, `[ci skip]` or `[skip deploy]` don't
 build on Vercel (`ignoreCommand` in `vercel.json`). Use it when merging changes
 that shouldn't go live yet.
