@@ -26,3 +26,9 @@ text and remove the class.
 2. Project → Settings → Domains: add `hlee.tw` and `www.hlee.tw`.
 3. At your DNS provider: `A hlee.tw → 76.76.21.21`, `CNAME www → cname.vercel-dns.com`
    (or use the values Vercel shows). `vercel.json` redirects `www` to the apex.
+
+### Skipping a deploy
+
+Commits whose title (first line) contains `[skip ci]`, `[ci skip]` or `[skip deploy]` don't
+build on Vercel (`ignoreCommand` in `vercel.json`). Use it when merging changes
+that shouldn't go live yet.
